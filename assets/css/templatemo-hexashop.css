@@ -2409,9 +2409,9 @@ grid
   text-align: center;
   font-weight: bold;
 }
-@media (max-width: 920px) {
+@media (max-width: 1000px) {
   .tvGroup {grid-template-columns: repeat(6, 1fr);
-    width: 420px;
+    width: 520px;
     }
     
   }
@@ -2423,19 +2423,21 @@ grid
     }
 
 .youtube {
-  width: 560px
-  height: 315px 
+  width: 730px;
+  height: 410px; 
 }
 
-@media (max-width: 920px){
+@media (max-width: 1000px){
   .youtube {
-    width: 420px;
+    width: 560px;
+    height: 315px; 
     }
     
 }
 @media (max-width: 480px){
   .youtube {
     width: 350px;
+    height: 198px; 
     }
     
 }

@@ -341,15 +341,19 @@ https://templatemo.com/tm-571-hexashop
                               var encodedUrl = encodeURIComponent(videoUrl);
                               var windowFeatures = "width=1230, height=735, resizable=yes, scrollbars=yes";
 
-                              if (userAgent.indexOf('chrome') > -1 && !userAgent.includes('edge')) {
-                                    // 크롬 사용자에게는 다른 URL로 리다이렉션
-                                    var newUrl = "chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl;
-                                    var newWindow = window.open(newUrl, windowFeatures);
-                              } else {
-                                var newWindow = window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
-                              }
+                              if (/iphone|ipad|ipod|android/i.test(userAgent)) {
+                                    // 모바일 사용자는 간단한 HTML 페이지로 리다이렉션
+                                    var newWindow = window.open("mobileVideo.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
+                                } else if (userAgent.indexOf('chrome') > -1 && !userAgent.includes('edge')) {
+                                    // 크롬 사용자는 확장 프로그램 URL로 리다이렉션
+                                    var newUrl = "chrome-extension://your_correct_extension_id/player.html#" + encodedUrl;
+                                    var newWindow = window.open(newUrl, "VideoPlayerWindow", windowFeatures);
+                                } else {
+                                    // 그 외의 경우는 기본 비디오 페이지 사용
+                                    var newWindow = window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
 
                             }
+                        }
                       </script>
 <!-- 
                         <script>

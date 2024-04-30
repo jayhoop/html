@@ -41,18 +41,26 @@
 <script>
   var video = document.getElementById('video');
   var videoSrc = decodeURIComponent(new URLSearchParams(window.location.search).get('video'));
+  var userAgent = navigator.userAgent.toLowerCase();
 
   if (Hls.isSupported()) {
     var hls = new Hls({ debug: true });
     hls.loadSource(videoSrc);
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
     });
+
+  } else if (userAgent.indexOf('chrome') > -1) {
+                // 크롬일 경우 원하는 URL로 리다이렉트합니다.
+                window.location.href = "chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#"+ videoSrc;
+
   } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
     video.src = videoSrc;
     video.addEventListener('loadedmetadata', function() {
+      video.play();
     });
-  } else {
+  }else {
     console.error("This browser does not support HLS");
   }
 </script>

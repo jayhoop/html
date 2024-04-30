@@ -1,46 +1,1054 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        // 오른쪽 클릭 방지 함수
+        function disableRightClick(event) {
+          if (event.button === 2) { // 오른쪽 클릭 시 event.button 값은 2
+            alert('오른쪽 클릭은 사용할 수 없습니다.');
+            return false;
+          }
+        }
+      
+        // contextmenu 이벤트를 통해 마우스 우클릭 방지
+        document.addEventListener('contextmenu', function(event) {
+          event.preventDefault(); // 기본 이벤트를 막음
+          return false;
+        });
+      
+        // mousedown 이벤트를 통해 마우스 클릭 감지
+        document.addEventListener('mousedown', disableRightClick);
+      </script>
+  <head>
 
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>HTML Example</title>
-  
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/about.css">
-</head>
-<body>
-  <section class="center">
-    <aside class="sidebar"></aside>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>hello my page</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+
+TemplateMo 571 Hexashop
+
+https://templatemo.com/tm-571-hexashop
+
+-->
+    </head>
     
-    <section class="contents">
-      <!-- page will be include here -->
-      <section id="page" class="page">
-        <section id="about">
-          <section class="frame">
-            <h2><b>HELLO</b>WORLD</h2>
-            
-            <div class="cat">
-              <div class="picture">
-                <img src="images/mew.png" alt="Mew">
-              </div>
-              <small>Mew</small>
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.jpg">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#men">실시간 티비</a></li>
+                            <li class="scroll-to-section"><a href="#kids">최신 KPOP</a></li>
+                            <li class="scroll-to-section"><a href="contact.html">문의사항</a></li>
+                            <!--          
+                                <li class="submenu">
+                                <a href="javascript:;">Pages</a>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="products.html">Products</a></li>
+                                    <li><a href="single-product.html">Single Product</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <a href="javascript:;">Features</a>
+                                <ul>
+                                    <li><a href="#">Features Page 1</a></li>
+                                    <li><a href="#">Features Page 2</a></li>
+                                    <li><a href="#">Features Page 3</a></li>
+                                    <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
+                                </ul>
+                            </li>
+
+                  
+                            <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+                            -->
+
+
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
             </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/siesta.png" alt="Siesta">
-              </div>
-              <small>Siesta</small>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <!-- <div class="main-banner" id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <div class="thumb">
+                            <div class="inner-content">
+                                <h4>Home</h4>
+                                                             
+                                    <span>Awesome, clean &amp; creative HTML5 Template</span>
+                                    <div class="main-border-button">
+                                    <a href="#">Purchase Now!</a>
+                                    </div>
+                                -->
+<!-- 
+                            </div>
+                            <img src="assets/images/left-banner-image.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4></h4>
+                                            <span>Best Clothes For Women</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Women</h4>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/baner-right-image-01.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Men</h4>
+                                            <span>Best Clothes For Men</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Men</h4>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/baner-right-image-02.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Kids</h4>
+                                            <span>Best Clothes For Kids</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Kids</h4>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/baner-right-image-03.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Accessories</h4>
+                                            <span>Best Trend Accessories</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Accessories</h4>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/baner-right-image-04.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/tiger.png" alt="Tiger">
-              </div>
-              <small>Tiger</small>
+        </div>
+    </div> -->
+    <!-- ***** Main Banner Area End *****  -->
+
+    <!-- ***** Men Area Starts ***** -->
+    <section class="section" id="men">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>실시간티비</h2>
+                        <span>로그인 없이, 다운로드 없이 공중파 & 케이블 방송보기</span>
+                    </div>
+
+                        <div class="tvGroup">
+
+                        <div class="tile" onclick="openVideoWindow('https://1tv.gscdn.kbs.co.kr/1tv_3.m3u8?Expires=1714555332&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xdHYuZ3NjZG4ua2JzLmNvLmtyLzF0dl8zLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3MTQ1NTUzMzJ9fX1dfQ__&Signature=NYpY9MPQ9Jdhx3~B-yqZXgV-ZJ6TTS-2HmtE~IsvjNdSgpFpxNJ7Qlky7INQLA3IASI2aE8ZK5HfDcTPrkBOrbfRr~xn9BXnBkB5wk5An9lTKAJ3~mZV8hjM07ljsm0MP4~KupZ-hNXilP8PbS9uWNzjmf9p~R8w7eo1xcf298LdnUDhLGzOntbHHHB6GB~AY8Ia3l6C4w0BrYDlI8UzpFrDqGo7BjUBliAkHb83XpF463olucf5qEwZdlcRxuSIMktPUfMzvjOdu~MNLB1XfIk46UJaGbc8Uy-JXoTIHjthRhJNLFidicPeKVFFchNnAYCfriFDQk4VrzHKcQbPXw__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/kbs1.jpg">
+                        <div class="chInfo">KBS 1</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://2tv.gscdn.kbs.co.kr/2tv_1.m3u8?Expires=1714555292&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8ydHYuZ3NjZG4ua2JzLmNvLmtyLzJ0dl8xLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3MTQ1NTUyOTJ9fX1dfQ__&Signature=inoxD6xXLTy4MMsHdZTpolmv-Fy9XqToobR~WxHUFeVqLwej7jX3Rj1tqkyvgISz-2us5ZvbapKuBKbBr4yHwLh6I5dDSoxdMXEETZAqbtgiWrintPh2Qdqm7L0xGXc9IVqoZhrJJdRKi50y6A3hbQfffAEiOHt133sib0edWX-OqEYo1Jd9JmY0pyQnfhu9MFiTfyqSnl6p10w8BYP2eSo3vVIOjf7L-J9VD2KaNjJR9XlT5uJGdDNjXYbv6EwHnehKr3v4yf3vEOeUrh4t2zGIK6t-lygkMGaZLP1CGnz2WWR9BVF~yffZ8t0QC7iA75hfkFdLh1nG-KH7aBaBHw__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/kbs2.jpg">
+                        <div class="chInfo">KBS 2</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://kbsndrama.gscdn.kbs.co.kr/kbsndrama-02/kbsndrama-02_sd.m3u8?Expires=1714555302&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9rYnNuZHJhbWEuZ3NjZG4ua2JzLmNvLmtyL2tic25kcmFtYS0wMi9rYnNuZHJhbWEtMDJfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTMwMn19fV19&Signature=Ecw0W~6WuV0W68Wzfe8VHJVUv476KAOBL6nTK0ykf4MeEeitws2XM1WGo18QxwnjHnMsIUBhX7GEjZCQ255E~0XNy9lg0FcmCDxfD2FFXDTfGgum5A-0GCYxXawLqlgCeW-UFkWtSNq1KrYVUYIa0oAZVQtW9rRCgk2pqJ0CDmuca8egYo~c4DxZ8BUC6WpOp9UTlwnbgf7nVxFhWJ8nm9tsT6OWzzeD-QxtJ6CczSlzM7-tYmgvUuRUiCsQR-E~BZGXCgHKR7z6IGkI1IDsFc9lGwynz2xAMPjGRuYKEeQtC2VmaxMKuphmF0l8YU9crRqhZiIMHIR06O6Kn8RKvw__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/kbs_drama.png">
+                        <div class="chInfo">KBS Drama</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://kbsnjoy.gscdn.kbs.co.kr/kbsnjoy-02/kbsnjoy-02_sd.m3u8?Expires=1714555259&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9rYnNuam95LmdzY2RuLmticy5jby5rci9rYnNuam95LTAyL2tic25qb3ktMDJfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTI1OX19fV19&Signature=H3U~Xc0FrHwoMXLGK-jGwC0pFCUzvYJqntzjE1O9Iqnjnzez2BN0JNPksBmJZa~BlsAwz0g4WVsP98X836tAt1TJn0DYpoboOOQE7YBFJSlDvO~EH1irFqW7eSQzPaROL~dFzAbRa3JBm8Xnrs42ZZ7Z2cMn-ckE76IyR9wNVpnafmSxkJph3VbgB0LA-UNshq~OXDXx5fs-o6dVQOV7d8ONXiLy~eCpf50GLTqjQDipPBqEbdS-u2FqfxxbqzsKW8mLhykVKkdBOHzT6xmkcIzuIZFnkyIt3-sOdHVjeEBNTbjerUry1gCpDat8pXyEC4z3~fnzLM-rbZqHixXFmg__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/KBS-Joy-HD-live.jpg">
+                        <div class="chInfo">KBS Joy</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://kbsnlife.gscdn.kbs.co.kr/kbsnlife-02/kbsnlife-02_sd.m3u8?Expires=1714555240&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9rYnNubGlmZS5nc2Nkbi5rYnMuY28ua3Iva2JzbmxpZmUtMDIva2JzbmxpZmUtMDJfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTI0MH19fV19&Signature=QygRF7DZ8QQ9CI1M1TJ6551JV6jxv5CrDXuEjZy1uiUTv7k4IINXmVHMZtnMJgxS-1fM~NiWhItIygF1NyTjtmVfnWEtOhSildxNUGIJr3z4ULnSxIq8Qb95mTEROq2Z-NsOc2NlKaCl5xgdjXIjMQNeyd45Xm14tGMN5LqkbKLIt90EOUZMjNOjkPlyPmZGGlifqesao1ccKNkGBmPpXZoa4CIErfOM9HZvwPTFxIo0r4jcoDI3JAu-CMK~tmr7R0Ck6fD9S8nPLn1XTV~bue175FsKorvB3TDm8gGjp7bSPB6qGcn6~zsghOCBg3aMRhmh8ZpbSi2fyVz3OYDn7A__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/images.jpg">
+                        <div class="chInfo">KBS Life</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://kbsnw.gscdn.kbs.co.kr/kbsnw-01/kbsnw-01_sd.m3u8?Expires=1714555210&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9rYnNudy5nc2Nkbi5rYnMuY28ua3Iva2JzbnctMDEva2JzbnctMDFfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTIxMH19fV19&Signature=m0sgVK1iD2e-ny3hlKL3QJGuuEZMXDEhn~D2qXuiMqmLwWv3jpP7bcfogcaFe7HLN4MJctk7QXDGDZlhW6xdDt~eQxDm2R2PYASUDTETplBeK~0GS0YPGTUDVbIDGWLgEBMNnksF8shsjviFeVHyUPr5N8yVP2emasNhxWtoIeml8y~Yf02wxcUbv~8QAO31Oi2B5nx2ieIfQMyqIJhBt2ZslneEmSkmCMFOTnLd6jUBl3~msXPqQVg4eevYW-JSbk8Y2Q59Ih9zPoVcrslW3gvSAuicefraPL7JZX5rJrjw9kPLzt02HTAfggMjKVlCFFOCmytpu1a8LzdFaanGyA__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/kbs_story.jpg">
+                        <div class="chInfo">KBS Story</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://kbsnkids.gscdn.kbs.co.kr/kbsnkids-02/kbsnkids-02_sd.m3u8?Expires=1714555216&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9rYnNua2lkcy5nc2Nkbi5rYnMuY28ua3Iva2JzbmtpZHMtMDIva2JzbmtpZHMtMDJfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTIxNn19fV19&Signature=XsjM5mYiEWKdNweEXMvKPbZp49~7AgJbXEgbMBWDzXBQtPV0XqgEcP8ECQtRg89rcRLIddb7HsbTk7OXFclz5PPR0UgzfUSCdqaED-l5yoHornGCTC9KliY~egfq5Flc1ZieZtbgrYOVGe~XmhR74OawJR0~HCAfBgm9KsUyHat7H3BRcdZsAnfikd46aJVZ-IR8cTcFjDvtnzTp9JYphWvrwNI~4~BC5uJ5de3yApu~DFBWqpvAFvhHoMq2AyV~I59zeMpKdQ2CAWI8M0qjRZrCW89GGbsIqJH6NdC5PUcQCpe7C-8V0I93zZwDB0Nh9iJCyVhH9HyyLuJ948z4ZQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/images.png">
+                        <div class="chInfo">KBS Kids</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://world.gscdn.kbs.co.kr/world-01/world-01_sd.m3u8?Expires=1714555071&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly93b3JsZC5nc2Nkbi5rYnMuY28ua3Ivd29ybGQtMDEvd29ybGQtMDFfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTA3MX19fV19&Signature=LopcDzFrFLp~qpCWK6H8LDuiTL7sKFtByy2yeKOdPrTfvkRjKTL~QA3ntdrsYgCtFseK5N8nD~Z-r-Q3sMMK8ocEqO5jm2Tdp9evxK4QSHfttyfYQhDWobMaJFHZ~BUE1yET7sj0ErFgU6kIS06WUlqweV3cQTFGIl7aCyq9DZfBPNFC9xwWE9y2HkIdn8v6E8O2siXouxvdR0d~sfKRdjrJ6rOEotuQzwdGazjWCX-XCbWXSyn5ULhjpXdgU5h8Mmj3JeTdcsrVuGneJs4f48lhHobfCWxzbyylT7X2qnD~mmC3ciR-DjNl~wYz-0UN-qeUVNhvyfXYnIv~2pgb2w__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/kbs_world.png">
+                        <div class="chInfo">KBS World</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://ns1.tjmbc.co.kr/live/myStream.sdp/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">대전 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://5ee1ec6f32118.streamlock.net/live/livetv/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">대구 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://media.kjmbc.co.kr/hls/live/stream/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">광주 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://5ee9633b25727.streamlock.net/jmbc_tv/_definst_/jmbc_tv.stream/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">전주 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('http://vod.mbceg.co.kr:1935/tvlive/livestream2/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">강원 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://vod.mpmbc.co.kr/a_live/25246741/ch001/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">목포 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://stream.chmbc.co.kr/TV/myStream/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">춘천 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://wowza.jejumbc.com/live/tv_jejumbc/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">제주 MBC</div>
+                        </div>
+
+
+                        <div class="tile" onclick="openVideoWindow('http://59.23.231.102:1935/live/UBCstream/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">대전 SBS</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://stream1.knn.co.kr/hls/9ly4534y7dm2xfa123r2_tv/index.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">대구 SBS</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('http://203.251.91.122:1935/on-air-Backup/tv/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">광주 SBS</div>
+                        </div>                  
+                        <div class="tile" onclick="openVideoWindow('http://61.82.49.4:1935/live/_definst_/tv.stream/chunklist_w432889607.m3u8')" style="cursor: pointer;"><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">전주 SBS</div>
+                        </div>                        
+                        <div class="tile" onclick="openVideoWindow('https://vod.ikbc.co.kr/KBCTV/tv/playlist.m3u8')" style="cursor: pointer;"><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">강원 SBS</div>
+                        </div>                         
+                        <div class="tile" onclick="openVideoWindow('http://61.85.197.53:1935/jtv_live/myStream/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">울산 SBS</div>
+                        </div>                       
+                        <div class="tile" onclick="openVideoWindow('http://1.222.207.80:1935/live/cjbtv/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">청주 SBS</div>
+                        </div>                      
+                        <div class="tile" onclick="openVideoWindow('https://stream1.knn.co.kr/hls/9ly4534y7dm2xfa123r2_tv/index.m3u8')" style="cursor: pointer;"><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">부산 SBS</div>
+                        </div>          
+
+<!--                         
+                        <div id="ytTxt">
+                        <br>
+                        <div style="text-align: center;">
+                        <b><span style="color: red;">실행이 안될 경우 크롬에서 HLS 확장프로그램을 설치하세요</span></b></div>
+                        <div style="margin: 10px 0px; text-align: center;">
+                        <a href="https://chrome.google.com/webstore/detail/play-hls/hahkjjkedonglpienpfiganogikkkoii" style="background: rgb(95, 204, 178); border-radius: 3px; border: 1px solid rgb(204, 204, 204); color: white; display: inline-block; padding: 3px 10px;" target="_blank">Play HLS M3u8 설치하기</a>
+                        </div> -->
+                        <!-- 각각의 방송국 링크는 다음과 같습니다.<br>
+                        KBS http://myk.kbs.co.kr/<br>
+                        MBC http://vodmall.imbc.com/player/onair.aspx<br>
+                        SBS http://play.sbs.co.kr/onair/pc/index.html 
+                        </div> -->
+
+                        <script>
+                            function openVideoWindow(videoUrl) {
+                              var encodedUrl = encodeURIComponent(videoUrl);
+                              var windowFeatures = "width=1230, height=735, resizable=yes, scrollbars=yes";
+                              var newWindow = window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
+                            }
+                            </script>
+
+<!-- 
+                        <script>
+                            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent)) {
+                                $('#ytTxt').hide();
+                            }
+                          
+                          
+                        var _0x35eb=["\x6D\x69\x6E\x74\x65\x6C\x6C\x79\x2E\x62\x6C\x6F\x67\x73\x70\x6F\x74","\x69\x6E\x64\x65\x78\x4F\x66","\x64\x6F\x6D\x61\x69\x6E","\x68\x72\x65\x66","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x6D\x69\x6E\x74\x65\x6C\x6C\x79\x2E\x63\x6F\x6D\x2F","\x68\x74\x74\x70\x3A\x2F\x2F\x6D\x79\x6B\x2E\x6B\x62\x73\x2E\x63\x6F\x2E\x6B\x72\x2F\x6C\x69\x76\x65\x5F\x70\x6F\x70\x75\x70\x3F\x63\x68\x69\x64\x3D","\x26\x63\x68\x74\x79\x70\x65\x3D\x54\x56","","\x72\x65\x73\x69\x7A\x61\x62\x6C\x65\x3D\x79\x65\x73\x2C\x20\x73\x63\x72\x6F\x6C\x6C\x62\x61\x72\x73\x3D\x6E\x6F\x2C\x20\x77\x69\x64\x74\x68\x3D\x36\x30\x30\x2C\x20\x68\x65\x69\x67\x68\x74\x3D\x33\x33\x38","\x6F\x70\x65\x6E","\x68\x74\x74\x70\x3A\x2F\x2F\x70\x6C\x61\x79\x65\x72\x2E\x73\x62\x73\x2E\x63\x6F\x2E\x6B\x72\x2F\x4F\x6E\x41\x69\x72\x2F\x4F\x6E\x41\x69\x72\x50\x6C\x61\x79\x65\x72\x2E\x73\x77\x66\x3F\x63\x6F\x6E\x74\x72\x6F\x6C\x53\x65\x74\x74\x69\x6E\x67\x3D\x59\x59\x59\x59\x59\x59\x4E\x4E\x4E","\x72\x65\x73\x69\x7A\x61\x62\x6C\x65\x3D\x79\x65\x73\x2C\x20\x73\x63\x72\x6F\x6C\x6C\x62\x61\x72\x73\x20\x3D\x6E\x6F\x2C\x20\x77\x69\x64\x74\x68\x3D\x36\x30\x30\x2C\x20\x68\x65\x69\x67\x68\x74\x3D\x33\x33\x38","\x68\x65\x61\x64","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x73\x42\x79\x54\x61\x67\x4E\x61\x6D\x65","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x72\x65\x6D\x6F\x76\x65\x43\x68\x69\x6C\x64","\x67\x65\x74\x54\x69\x6D\x65","\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x74\x79\x70\x65","\x74\x65\x78\x74\x2F\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74","\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65","\x69\x64","\x73\x72\x63","\x68\x74\x74\x70\x3A\x2F\x2F\x6D\x69\x6E\x69\x70\x6C\x61\x79\x2E\x69\x6D\x62\x63\x2E\x63\x6F\x6D\x2F\x57\x65\x62\x4C\x69\x76\x65\x55\x52\x4C\x2E\x61\x73\x68\x78\x3F\x63\x68\x61\x6E\x6E\x65\x6C\x3D\x6F\x6E\x61\x69\x72\x74\x76\x5F\x35\x30\x30\x6B\x26\x70\x72\x6F\x74\x6F\x63\x6F\x6C\x3D\x52\x54\x4D\x50\x26\x63\x61\x6C\x6C\x62\x61\x63\x6B\x3D\x6A\x61\x72\x76\x69\x73\x2E\x6D\x69\x6E\x69\x49\x6E\x66\x6F\x2E\x6C\x6F\x61\x64\x4F\x6E\x41\x69\x72\x43\x6F\x6D\x70\x6C\x65\x74\x65\x26\x76\x3D","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x6D\x69\x6E\x69\x49\x6E\x66\x6F","\x6C\x6F\x61\x64\x4F\x6E\x41\x69\x72\x43\x6F\x6D\x70\x6C\x65\x74\x65","\x3F","\x73\x70\x6C\x69\x74","\x41\x41\x43\x4C\x69\x76\x65\x55\x52\x4C","\x68\x74\x74\x70\x3A\x2F\x2F\x76\x6F\x64\x6D\x61\x6C\x6C\x2E\x69\x6D\x62\x63\x2E\x63\x6F\x6D\x2F\x70\x6C\x61\x79\x65\x72\x2F\x61\x64\x61\x70\x74\x70\x6C\x61\x79\x65\x72\x2F\x6A\x5F\x73\x77\x66\x2F\x46\x6C\x61\x73\x68\x50\x6C\x61\x79\x65\x72\x2E\x73\x77\x66\x3F\x76\x69\x65\x77\x43\x6F\x6E\x74\x72\x6F\x6C\x3D\x74\x72\x75\x65\x26\x69\x73\x50\x6F\x70\x75\x70\x3D\x74\x72\x75\x65\x26\x69\x73\x55\x49\x48\x69\x64\x64\x65\x6E\x3D\x74\x72\x75\x65\x26\x76\x6F\x6C\x75\x6D\x65\x3D\x31\x26\x76\x6F\x64\x55\x72\x6C\x3D","\x72\x74\x6D\x70\x3A\x2F\x2F\x69\x6D\x62\x63\x6F\x6E\x61\x69\x72\x74\x76\x2E\x69\x6D\x62\x63\x2E\x63\x6F\x6D\x2F\x69\x6D\x62\x63\x5F\x6F\x6E\x61\x69\x72\x74\x76\x2F\x5F\x64\x65\x66\x69\x6E\x73\x74\x5F\x2F\x6F\x6E\x61\x69\x72\x74\x76\x5F\x35\x30\x30\x6B\x2E\x73\x74\x72\x65\x61\x6D\x3F"];function popKBS(c) {
+                          var jsonSource = "https://cfpwwwapi.kbs.co.kr/api/v1/landing/live/channel_code/" + c;
+                          var url = "";
+                          $.getJSON(jsonSource, function(data){
+                            url = data.channel_item[0].service_url;
+                            openCenter(url, 980, 550, 'KBS'+c);
+                          });
+                            //var url = "http://onair.kbs.co.kr/?sname=onair&stype=live&ch_code=" + c + "&ch_type=globalList";
+                            //openCenter(url, 1230, 735);
+                        }
+                          
+                        function showSBS(v) {
+                          var url = '';
+                          if (v == '부산')
+                              url = "https://stream1.knn.co.kr/hls/9ly4534y7dm2xfa123r2_tv/index.m3u8";
+                          else if (v == '대구') 
+                            url = "http://203.251.91.122:1935/on-air-Backup/tv/playlist.m3u8";
+                          else if (v == '광주') 
+                            url = "https://vod.ikbc.co.kr/KBCTV/tv/playlist.m3u8";
+                          else if (v == '강원') 
+                            url = "http://61.82.49.4:1935/live/_definst_/tv.stream/chunklist_w432889607.m3u8";
+                          else if (v == '전주') 
+                            url = "http://61.85.197.53:1935/jtv_live/myStream/playlist.m3u8";
+                          else if (v == '울산') 
+                            url = "http://59.23.231.102:1935/live/UBCstream/playlist.m3u8";
+                          else if (v == '대전') 
+                            url = "http://1.245.74.5:1935/live/tv/playlist.m3u8";
+                          else if (v == '청주') 
+                            url = "http://1.222.207.80:1935/live/cjbtv/playlist.m3u8";
+                        
+                          openCenter(url, 980, 550, v + ' SBS');
+                        }
+                          
+                        
+                        function showMBC(v) {
+                          var url = '';
+                          if (v == '강원')
+                              url = "http://vod.mbceg.co.kr:1935/tvlive/livestream2/playlist.m3u8";
+                          else if (v == '대구') 
+                            url = "https://5ee1ec6f32118.streamlock.net/live/livetv/playlist.m3u8";
+                          else if (v == '광주') 
+                            url = "https://media.kjmbc.co.kr/hls/live/stream/playlist.m3u8";
+                          else if (v == '대전') 
+                            url = "https://ns1.tjmbc.co.kr/live/myStream.sdp/playlist.m3u8";
+                          else if (v == '전주') 
+                            url = "https://5ee9633b25727.streamlock.net/jmbc_tv/_definst_/jmbc_tv.stream/playlist.m3u8";
+                          else if (v == '목포') 
+                            url = "https://vod.mpmbc.co.kr/a_live/25246741/ch001/playlist.m3u8";
+                          else if (v == '춘천') 
+                            url = "https://stream.chmbc.co.kr/TV/myStream/playlist.m3u8";
+                          else if (v == '제주') 
+                            url = "https://wowza.jejumbc.com/live/tv_jejumbc/playlist.m3u8";
+                          
+                          openCenter(url, 980, 550, v + ' MBC');
+                        }
+                          
+                          
+                        function openCenter(url, w, h, ch) {
+                        
+                          var popupWidth = window.screen.width * 0.7;
+                          var popupHeight = popupWidth * 0.56 + 5;
+                          var popupX = (window.screen.width / 2) - (popupWidth / 2) + ((window.screenLeft < window.screen.width) ? 0 : window.screen.width);
+                          var popupY= (window.screen.height / 2) - (popupHeight / 2);
+                            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent)) {
+                                window.open(url);
+                            }
+                            else {
+                             window.open("chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + url, '', 'status=no, height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
+                            }
+                          //location.href = "/p/onair.html?ch=" + ch;
+                        }
+                        </script>
+                        </div></div>
+                        <div style="clear: both;"></div>
+                        </div>
+                </div>
             </div>
-          </section>
-        </section>
-      </section>
+        </div> -->
+        <!--<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="men-item-carousel">
+                        <div class="owl-men-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/men-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Spring</h4>
+                                    <span>$120.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/men-02.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Air Force 1 X</h4>
+                                    <span>$90.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/men-03.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Love Nana ‘20</h4>
+                                    <span>$150.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/men-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Spring</h4>
+                                    <span>$120.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        
     </section>
-  </section>
-</body>
+    <!-- ***** Men Area Ends ***** -->
+
+    <!-- ***** Women Area Starts ***** -->
+    <!-- <section class="section" id="women">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Women's Latest</h2>
+                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="women-item-carousel">
+                        <div class="owl-women-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/women-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>New Green Jacket</h4>
+                                    <span>$75.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/women-02.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Dress</h4>
+                                    <span>$45.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/women-03.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Spring Collection</h4>
+                                    <span>$130.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/women-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Spring</h4>
+                                    <span>$120.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ***** Women Area Ends ***** -->
+
+    <!-- ***** Kids Area Starts ***** -->
+    <section class="section" id="kids">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>TOP 100 최신 KPOP</h2>
+                        <span>youtube 실행</span>
+                    </div>
+ 
+        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=dyB0PQIZm1GY2ZB7&amp;list=PL2HEDIx6Li8g4br5cHotBAp6Fikyviq0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+           
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="kid-item-carousel">
+                        <div class="owl-kid-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/kid-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>School Collection</h4>
+                                    <span>$80.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/kid-02.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Summer Cap</h4>
+                                    <span>$12.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/kid-03.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Kid</h4>
+                                    <span>$30.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/kid-01.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Spring</h4>
+                                    <span>$120.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <!-- ***** Kids Area Ends ***** -->
+
+    <!-- ***** Explore Area Starts ***** -->
+    <!-- <section class="section" id="explore">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <h2>Explore Our Products</h2>
+                        <span>You are allowed to use this HexaShop HTML CSS template. You can feel free to modify or edit this layout. You can convert this template as any kind of ecommerce CMS theme as you wish.</span>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i><p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+                        </div>
+                        <p>There are 5 pages included in this HexaShop Template and we are providing it to you for absolutely free of charge at our TemplateMo website. There are web development costs for us.</p>
+                        <p>If this template is beneficial for your website or business, please kindly <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">support us</a> a little via PayPal. Please also tell your friends about our great website. Thank you.</p>
+                        <div class="main-border-button">
+                            <a href="products.html">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="leather">
+                                    <h4>Leather Bags</h4>
+                                    <span>Latest Collection</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="first-image">
+                                    <img src="assets/images/explore-image-01.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="second-image">
+                                    <img src="assets/images/explore-image-02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="types">
+                                    <h4>Different Types</h4>
+                                    <span>Over 304 Products</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ***** Explore Area Ends ***** -->
+
+    <!-- ***** Social Area Starts ***** -->
+    <!-- <section class="section" id="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Social Media</h2>
+                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row images">
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Fashion</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>New</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-02.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Brand</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-03.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Makeup</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-04.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Leather</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-05.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Bag</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="assets/images/instagram-06.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ***** Social Area Ends ***** -->
+
+    <!-- ***** Subscribe Area Starts ***** -->
+    <!-- <div class="subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-heading">
+                        <h2>By Subscribing To Our Newsletter You Can Get 30% Off</h2>
+                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                    </div>
+                    <form id="subscribe" action="" method="get">
+                        <div class="row">
+                          <div class="col-lg-5">
+                            <fieldset>
+                              <input name="name" type="text" id="name" placeholder="Your Name" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-5">
+                            <fieldset>
+                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-2">
+                            <fieldset>
+                              <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i></button>
+                            </fieldset>
+                          </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <ul>
+                                <li>Store Location:<br><span>Sunny Isles Beach, FL 33160, United States</span></li>
+                                <li>Phone:<br><span>010-020-0340</span></li>
+                                <li>Office Location:<br><span>North Miami Beach</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li>Work Hours:<br><span>07:30 AM - 9:30 PM Daily</span></li>
+                                <li>Email:<br><span>info@company.com</span></li>
+                                <li>Social Media:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Behance</a>, <a href="#">Linkedin</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- ***** Subscribe Area Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <!-- <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                        </div>
+                        <ul>
+                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
+                            <li><a href="#">hexashop@company.com</a></li>
+                            <li><a href="#">010-020-0340</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Shopping &amp; Categories</h4>
+                    <ul>
+                        <li><a href="#">Men’s Shopping</a></li>
+                        <li><a href="#">Women’s Shopping</a></li>
+                        <li><a href="#">Kid's Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Tracking ID</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
+                        
+                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/slick.js"></script> 
+    <script src="assets/js/lightbox.js"></script> 
+    <script src="assets/js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
 </html>

@@ -41,7 +41,6 @@
 <script>
   var video = document.getElementById('video');
   var videoSrc = decodeURIComponent(new URLSearchParams(window.location.search).get('video'));
-  var userAgent = navigator.userAgent.toLowerCase();
 
   if (Hls.isSupported()) {
     var hls = new Hls({ debug: true });
@@ -50,18 +49,16 @@
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
       video.play();
     });
-
-  } else if (userAgent.indexOf('chrome') > -1) {
-                // 크롬일 경우 원하는 URL로 리다이렉트합니다.
-                window.location.href = "chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#"+ videoSrc;
-
   } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
     video.src = videoSrc;
     video.addEventListener('loadedmetadata', function() {
       video.play();
     });
-  }else {
-    console.error("This browser does not support HLS");
+  } else {
+    // 사용자에게 크롬 확장 프로그램 설치 페이지나 기능을 활성화할 것을 안내
+    alert('HLS 비디오를 재생하려면, HLS 지원 확장 프로그램을 설치하거나 다른 브라우저를 사용하세요.');
+    // 옵션으로 확장 프로그램 설치 URL을 제공할 수 있습니다
+    window.location.href = 'chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#'+ videoSrc;
   }
 </script>
 </body>

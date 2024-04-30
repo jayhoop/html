@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Video Player</title>
+<script>
+    // 오른쪽 클릭 방지 함수
+    function disableRightClick(event) {
+      if (event.button === 2) { // 오른쪽 클릭 시 event.button 값은 2
+        alert('오른쪽 클릭은 사용할 수 없습니다.');
+        return false;
+      }
+    }
+  
+    // contextmenu 이벤트를 통해 마우스 우클릭 방지
+    document.addEventListener('contextmenu', function(event) {
+      event.preventDefault(); // 기본 이벤트를 막음
+      return false;
+    });
+  
+    // mousedown 이벤트를 통해 마우스 클릭 감지
+    document.addEventListener('mousedown', disableRightClick);
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbars from appearing */
+  }
+  #video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will cover the whole screen while keeping aspect ratio */
+  }
+</style>
+</head>
+<body>
+<video id="video" controls autoplay></video>
+<script>
+  var video = document.getElementById('video');
+  var videoSrc = decodeURIComponent(new URLSearchParams(window.location.search).get('video'));
+
+  if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource(videoSrc);
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+    });
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = videoSrc;
+    video.addEventListener('loadedmetadata', function() {
+      video.play();
+    });
+  } else {
+    console.error("This browser does not support HLS");
+  }
+</script>
+</body>
+</html>
+

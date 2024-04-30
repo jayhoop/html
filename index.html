@@ -322,7 +322,8 @@ https://templatemo.com/tm-571-hexashop
                         <div id="ytTxt">
                         <br>
                         <div style="text-align: center;">
-                        <b><span style="color: red;">실행이 안될 경우 크롬에서 HLS 확장프로그램을 설치하세요</span></b></div>
+                        <b><span> 윈도우, 모바일(크롬)에서 SBS는 광주만 실행 가능합니다. 이외 방송은 다 사용가능합니다.</span></b>
+                        <b><span style="color: red;">크롬에서 HLS 확장프로그램을 설치하시면 다볼 수 있습니다.</span></b></div>
                         <div style="margin: 10px 0px; text-align: center;">
                         <a href="https://chrome.google.com/webstore/detail/play-hls/hahkjjkedonglpienpfiganogikkkoii" style="background: rgb(95, 204, 178); border-radius: 3px; border: 1px solid rgb(204, 204, 204); color: white; display: inline-block; padding: 3px 10px;" target="_blank">Play HLS M3u8 설치하기</a>
                         </div>
@@ -336,9 +337,18 @@ https://templatemo.com/tm-571-hexashop
                         
                         <script>
                             function openVideoWindow(videoUrl) {
+                              var userAgent = navigator.userAgent.toLowerCase();
                               var encodedUrl = encodeURIComponent(videoUrl);
                               var windowFeatures = "width=1230, height=735, resizable=yes, scrollbars=yes";
-                              var newWindow = window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
+
+                              if (userAgent.indexOf('chrome') > -1 && !userAgent.includes('edge')) {
+                                    // 크롬 사용자에게는 다른 URL로 리다이렉션
+                                    var newUrl = "chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl;
+                                    var newWindow = window.open(newUrl, windowFeatures);
+                              } else {
+                                var newWindow = window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
+                              }
+
                             }
                       </script>
 <!-- 

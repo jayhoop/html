@@ -212,33 +212,24 @@ https://templatemo.com/tm-571-hexashop
                         </div> -->
 
 <script>
-    var videoWindow = null;
-
-    function openVideoWindow(videoUrl) {
-        var userAgent = navigator.userAgent.toLowerCase();
-        var encodedUrl = encodeURIComponent(videoUrl);
-        var windowFeatures = "width=1230, height=735, resizable=yes, scrollbars=yes";
-        var timestamp = new Date().getTime(); // 현재 시간의 타임스탬프
-
-        if (!videoWindow || videoWindow.closed) {
-            var newUrl = determineURL(encodedUrl, userAgent) + "&t=" + timestamp;
-            videoWindow = window.open(newUrl, "VideoPlayerWindow", windowFeatures);
-        } else {
-            var newUrl = determineURL(encodedUrl, userAgent) + "&t=" + timestamp;
-            videoWindow.location.href = newUrl;
-            videoWindow.focus();
-        }
+function openVideoWindow(videoUrl) {
+    var userAgent = navigator.userAgent.toLowerCase();
+    var encodedUrl = encodeURIComponent(videoUrl);
+    var windowFeatures = "width=1230, height=735, resizable=yes, scrollbars=yes";
+    
+    // 모든 요청을 항상 새 창으로 열기
+    if (/iphone|ipad|ipod|Android|android|IEMobile|Mobile/i.test(userAgent)) {
+        // 모바일 사용자에게 적합한 페이지 열기
+        window.open("video.html?video=" + encodedUrl, "_blank", windowFeatures);
+    } else if (userAgent.includes('chrome') && !userAgent.includes('edg')) {
+        // 크롬 사용자를 위해 확장 프로그램 URL로 열기
+        window.open("chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl, "_blank", windowFeatures);
+    } else {
+        // 기타 브라우저 사용자를 위해 기본 비디오 페이지 사용
+        window.open("video.html?video=" + encodedUrl, "_blank", windowFeatures);
     }
+}
 
-    function determineURL(encodedUrl, userAgent) {
-        if (/iphone|ipad|ipod|Android|android|IEMobile|Mobile/i.test(userAgent)) {
-            return "video.html?video=" + encodedUrl;
-        } else if (userAgent.includes('chrome') && !userAgent.includes('edg')) {
-            return "chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl;
-        } else {
-            return "video.html?video=" + encodedUrl;
-        }
-    }
 </script>
 
 

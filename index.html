@@ -222,7 +222,7 @@ https://templatemo.com/tm-571-hexashop
                                 if (/iphone|ipad|ipod|Android|android|IEMobile|Mobile/i.test(userAgent)) {
                                     // 모바일 사용자는 간단한 HTML 페이지로 리다이렉션
                                     window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
-                                } else if (userAgent.includes('chrome')){
+                                } else if (userAgent.includes('chrome')&& !userAgent.includes('edg') && !userAgent('whale')){
                                     // 크롬 사용자는 확장 프로그램 URL로 리다이렉션
                                     window.open("chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl, "VideoPlayerWindow", windowFeatures);
                                 } else if (userAgent.includes('edg')){

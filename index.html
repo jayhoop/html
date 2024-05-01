@@ -343,24 +343,22 @@ https://templatemo.com/tm-571-hexashop
                         
                         <script>
                             function openVideoWindow(videoUrl) {
-                              var userAgent = navigator.userAgent.toLowerCase();
-                              var encodedUrl = encodeURIComponent(videoUrl);
-                              var windowFeatures = "width=1230, height=735, resizable=yes, scrollbars=yes";
-
-                              if (/iphone|ipad|ipod|Android|android|IEMobile|Mobile/i.test(userAgent)) {
+                                var userAgent = navigator.userAgent.toLowerCase();
+                                var encodedUrl = encodeURIComponent(videoUrl);
+                                var windowFeatures = "width=1230, height=735, resizable=yes, scrollbars=yes";
+                            
+                                if (/iphone|ipad|ipod|Android|android|IEMobile|Mobile/i.test(userAgent)) {
                                     // 모바일 사용자는 간단한 HTML 페이지로 리다이렉션
-                                    var newWindow = window.open("Video.html?video=" + encodedUrl, windowFeatures);
-                                } else if (userAgent.indexOf('chrome') > -1 && !userAgent.includes('edge')) {
+                                    window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
+                                } else if (userAgent.includes('chrome') && !userAgent.includes('edg') && !userAgent.includes('whale')&& !userAgent.includes('firefox') && !userAgent.includes('safari')){
                                     // 크롬 사용자는 확장 프로그램 URL로 리다이렉션
-                                    var newUrl = "chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl;
-                                    var newWindow = window.open(newUrl, windowFeatures);
+                                    window.open("chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl, "VideoPlayerWindow", windowFeatures);
                                 } else {
                                     // 그 외의 경우는 기본 비디오 페이지 사용
-                                    var newWindow = window.open("video.html?video=" + encodedUrl, windowFeatures);
-
+                                    window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
+                                }
                             }
-                        }
-                      </script>
+                            </script>
 <!-- 
                         <script>
                             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent)) {

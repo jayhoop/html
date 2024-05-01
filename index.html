@@ -225,12 +225,6 @@ https://templatemo.com/tm-571-hexashop
                                 } else if (userAgent.includes('chrome')&& !userAgent.includes('edg') && !userAgent('whale')){
                                     // 크롬 사용자는 확장 프로그램 URL로 리다이렉션
                                     window.open("chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl, "VideoPlayerWindow", windowFeatures);
-                                } else if (userAgent.includes('edg')){
-                                    // 크롬 사용자는 확장 프로그램 URL로 리다이렉션
-                                    window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
-                                } else if (userAgent.includes('whale')){
-                                    // 크롬 사용자는 확장 프로그램 URL로 리다이렉션
-                                    window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
                                 } else {
                                     // 그 외의 경우는 기본 비디오 페이지 사용
                                     window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);

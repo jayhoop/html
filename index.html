@@ -340,24 +340,22 @@ https://templatemo.com/tm-571-hexashop
                         MBC http://vodmall.imbc.com/player/onair.aspx<br>
                         SBS http://play.sbs.co.kr/onair/pc/index.html 
                         </div> -->
-                        
+
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
+
                         <script>
                             function openVideoWindow(videoUrl) {
-                                var userAgent = navigator.userAgent.toLowerCase();
                                 var encodedUrl = encodeURIComponent(videoUrl);
                                 var windowFeatures = "width=1230, height=735, resizable=yes, scrollbars=yes";
-                            
-                                if (/iphone|ipad|ipod|Android|android|IEMobile|Mobile/i.test(userAgent)) {
-                                    // 모바일 사용자는 간단한 HTML 페이지로 리다이렉션
+                                if (platform.os.family === 'iOS' || platform.os.family === 'Android') {
                                     window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
-                                } else if (userAgent.indexOf('chrome') && !userAgent.includes('edg') && !userAgent.includes('whale')&& !userAgent.includes('firefox') && !userAgent.includes('safari')){
-                                    // 크롬 사용자는 확장 프로그램 URL로 리다이렉션
+                                } else if (platform.name === 'Chrome') {
                                     window.open("chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl, "VideoPlayerWindow", windowFeatures);
                                 } else {
-                                    // 그 외의 경우는 기본 비디오 페이지 사용
                                     window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
                                 }
                             }
+
                             </script>
 <!-- 
                         <script>

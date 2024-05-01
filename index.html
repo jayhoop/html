@@ -186,8 +186,329 @@ https://templatemo.com/tm-571-hexashop
                         </div>
                         <div class="tile" onclick="openVideoWindow('https://d2zve2l62bwzcf.cloudfront.net/h264/spotv1/cmaf-hls/master.m3u8')" style="cursor: pointer;"><img src="assets/images/icon/spotv.png">          
                         <div class="chInfo">SPOtv</div>
+                        </div>    
                         <div class="tile" onclick="openVideoWindow('https://tvlive.sbs.co.kr/sbspluspc/sbsplus2.stream/chunklist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTQ1NzY1MDUsInBhdGgiOiIvc2JzcGx1czIuc3RyZWFtIiwiZHVyYXRpb24iOi0xLCJ1bm8iOiI0ZmIzZWVmMC04MDU2LTRjZTYtYmI0Zi1iNmQ3ZjYxZjU5NGUiLCJpYXQiOjE3MTQ1NjkzMDV9.yPu3gJOWzwDqasNVawCO8qQGR8YCpYKoRZhQWBvB9ss&solsessionid=dc2f275713cbcd78b012ebcb47079f4a')" style="cursor: pointer;"><img src="assets/images/icon/sbsplus.png">          
                         <div class="chInfo">sbsplus</div>    
+                </div>
+            </div>
+        </div>
+                                
+        <div id="ytTxt">
+            <br>
+            <div style="text-align: center;">
+            <b><span> 윈도우, 모바일(크롬)에서 SBS는 광주만 실행 가능합니다. 이외 방송은 다 사용가능합니다.</span></b>
+                <br>
+                <b><span> 패드에서 사용이 안될 때는 키위브라우저를 Playstore에서 다운받고 실행 후<br> 아래 Play HLS 확장프로그램을 추가하면 됩니다.</span></b>
+                <br>                        
+            <b><span style="color: red;">크롬에서 HLS 확장프로그램을 설치하시면 다볼 수 있습니다.</span></b></div>
+            <div style="margin: 10px 0px; text-align: center;">
+            <a href="https://play.google.com/store/search?q=%ED%82%A4%EC%9C%84%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80&c=apps" style="background: Orange; border-radius: 3px; border: 1px solid rgb(204, 204, 204); color: white; display: inline-block; padding: 3px 10px;" target="_blank">키위 브라우저 설치링크</a>
+            <a href="https://chrome.google.com/webstore/detail/play-hls/hahkjjkedonglpienpfiganogikkkoii" style="background: blue; border-radius: 3px; border: 1px solid rgb(204, 204, 204); color: white; display: inline-block; padding: 3px 10px;" target="_blank">Play HLS M3u8 설치링크</a>
+            
+            </div>
+
+
+                        <!-- 각각의 방송국 링크는 다음과 같습니다.<br>
+                        KBS http://myk.kbs.co.kr/<br>
+                        MBC http://vodmall.imbc.com/player/onair.aspx<br>
+                        SBS http://play.sbs.co.kr/onair/pc/index.html 
+                        </div> -->
+
+<script>
+function openVideoWindow(videoUrl) {
+    var userAgent = navigator.userAgent.toLowerCase();
+    var encodedUrl = encodeURIComponent(videoUrl);
+    var windowFeatures = "width=1230, height=735, resizable=yes, scrollbars=yes";
+    
+    // 모든 요청을 항상 새 창으로 열기
+    if (/iphone|ipad|ipod|Android|android|IEMobile|Mobile/i.test(userAgent)) {
+        // 모바일 사용자에게 적합한 페이지 열기
+        window.open("video.html?video=" + encodedUrl, "_blank", windowFeatures);
+    } else if (userAgent.includes('chrome') && !userAgent.includes('edg')) {
+        // 크롬 사용자를 위해 확장 프로그램 URL로 열기
+        window.open("chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl, "_blank", windowFeatures);
+    } else {
+        // 기타 브라우저 사용자를 위해 기본 비디오 페이지 사용
+        window.open("video.html?video=" + encodedUrl, "_blank", windowFeatures);
+    }
+}
+
+</script>
+
+
+        
+    </section>
+    <!-- ***** Men Area Ends ***** -->
+
+    <!-- ***** Women Area Starts ***** -->
+
+    <!-- ***** Women Area Ends ***** -->
+
+    <!-- ***** Kids Area Starts ***** -->
+    <section class="section" id="kids">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>TOP 100 최신 KPOP</h2>
+                        <span>youtube 실행</span>
+                    </div>
+ 
+        <div><iframe class="youtube" src="https://www.youtube.com/embed/videoseries?si=dyB0PQIZm1GY2ZB7&amp;list=PL2HEDIx6Li8g4br5cHotBAp6Fikyviq0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+           
+     
+    </section>
+    <!-- ***** Kids Area Ends ***** -->
+
+    <!-- ***** Explore Area Starts ***** -->
+    
+    <!-- ***** Explore Area Ends ***** -->
+
+    <!-- ***** Social Area Starts ***** -->
+  
+    <!-- ***** Social Area Ends ***** -->
+
+    <!-- ***** Subscribe Area Starts ***** -->
+    
+    <!-- ***** Subscribe Area Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/slick.js"></script> 
+    <script src="assets/js/lightbox.js"></script> 
+    <script src="assets/js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        // 오른쪽 클릭 방지 함수
+        function disableRightClick(event) {
+          if (event.button === 2) { // 오른쪽 클릭 시 event.button 값은 2
+            alert('오른쪽 클릭은 사용할 수 없습니다.');
+            return false;
+          }
+        }
+      
+        // contextmenu 이벤트를 통해 마우스 우클릭 방지
+        document.addEventListener('contextmenu', function(event) {
+          event.preventDefault(); // 기본 이벤트를 막음
+          return false;
+        });
+      
+        // mousedown 이벤트를 통해 마우스 클릭 감지
+        document.addEventListener('mousedown', disableRightClick);
+      </script>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>hello my page</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+
+TemplateMo 571 Hexashop
+
+https://templatemo.com/tm-571-hexashop
+
+-->
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.jpg">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#men">실시간 티비</a></li>
+                            <li class="scroll-to-section"><a href="#kids">최신 KPOP</a></li>
+                            <li class="scroll-to-section"><a href="contact.html">문의사항</a></li>
+
+
+
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+ 
+    <!-- ***** Main Banner Area End *****  -->
+
+    <!-- ***** Men Area Starts ***** -->
+    <section class="section" id="men">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>실시간티비</h2>
+                        <span>로그인 없이, 다운로드 없이 공중파 & 케이블 방송보기</span>
+                    </div>
+
+                        <div class="tvGroup">
+
+                        <div class="tile" onclick="openVideoWindow('https://1tv.gscdn.kbs.co.kr/1tv_3.m3u8?Expires=1714555332&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xdHYuZ3NjZG4ua2JzLmNvLmtyLzF0dl8zLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3MTQ1NTUzMzJ9fX1dfQ__&Signature=NYpY9MPQ9Jdhx3~B-yqZXgV-ZJ6TTS-2HmtE~IsvjNdSgpFpxNJ7Qlky7INQLA3IASI2aE8ZK5HfDcTPrkBOrbfRr~xn9BXnBkB5wk5An9lTKAJ3~mZV8hjM07ljsm0MP4~KupZ-hNXilP8PbS9uWNzjmf9p~R8w7eo1xcf298LdnUDhLGzOntbHHHB6GB~AY8Ia3l6C4w0BrYDlI8UzpFrDqGo7BjUBliAkHb83XpF463olucf5qEwZdlcRxuSIMktPUfMzvjOdu~MNLB1XfIk46UJaGbc8Uy-JXoTIHjthRhJNLFidicPeKVFFchNnAYCfriFDQk4VrzHKcQbPXw__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/kbs1.jpg">
+                        <div class="chInfo">KBS 1</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://2tv.gscdn.kbs.co.kr/2tv_1.m3u8?Expires=1714555292&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8ydHYuZ3NjZG4ua2JzLmNvLmtyLzJ0dl8xLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3MTQ1NTUyOTJ9fX1dfQ__&Signature=inoxD6xXLTy4MMsHdZTpolmv-Fy9XqToobR~WxHUFeVqLwej7jX3Rj1tqkyvgISz-2us5ZvbapKuBKbBr4yHwLh6I5dDSoxdMXEETZAqbtgiWrintPh2Qdqm7L0xGXc9IVqoZhrJJdRKi50y6A3hbQfffAEiOHt133sib0edWX-OqEYo1Jd9JmY0pyQnfhu9MFiTfyqSnl6p10w8BYP2eSo3vVIOjf7L-J9VD2KaNjJR9XlT5uJGdDNjXYbv6EwHnehKr3v4yf3vEOeUrh4t2zGIK6t-lygkMGaZLP1CGnz2WWR9BVF~yffZ8t0QC7iA75hfkFdLh1nG-KH7aBaBHw__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/kbs2.jpg">
+                        <div class="chInfo">KBS 2</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://kbsndrama.gscdn.kbs.co.kr/kbsndrama-02/kbsndrama-02_sd.m3u8?Expires=1714555302&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9rYnNuZHJhbWEuZ3NjZG4ua2JzLmNvLmtyL2tic25kcmFtYS0wMi9rYnNuZHJhbWEtMDJfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTMwMn19fV19&Signature=Ecw0W~6WuV0W68Wzfe8VHJVUv476KAOBL6nTK0ykf4MeEeitws2XM1WGo18QxwnjHnMsIUBhX7GEjZCQ255E~0XNy9lg0FcmCDxfD2FFXDTfGgum5A-0GCYxXawLqlgCeW-UFkWtSNq1KrYVUYIa0oAZVQtW9rRCgk2pqJ0CDmuca8egYo~c4DxZ8BUC6WpOp9UTlwnbgf7nVxFhWJ8nm9tsT6OWzzeD-QxtJ6CczSlzM7-tYmgvUuRUiCsQR-E~BZGXCgHKR7z6IGkI1IDsFc9lGwynz2xAMPjGRuYKEeQtC2VmaxMKuphmF0l8YU9crRqhZiIMHIR06O6Kn8RKvw__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/kbs_drama.png">
+                        <div class="chInfo">KBS Drama</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://kbsnjoy.gscdn.kbs.co.kr/kbsnjoy-02/kbsnjoy-02_sd.m3u8?Expires=1714555259&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9rYnNuam95LmdzY2RuLmticy5jby5rci9rYnNuam95LTAyL2tic25qb3ktMDJfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTI1OX19fV19&Signature=H3U~Xc0FrHwoMXLGK-jGwC0pFCUzvYJqntzjE1O9Iqnjnzez2BN0JNPksBmJZa~BlsAwz0g4WVsP98X836tAt1TJn0DYpoboOOQE7YBFJSlDvO~EH1irFqW7eSQzPaROL~dFzAbRa3JBm8Xnrs42ZZ7Z2cMn-ckE76IyR9wNVpnafmSxkJph3VbgB0LA-UNshq~OXDXx5fs-o6dVQOV7d8ONXiLy~eCpf50GLTqjQDipPBqEbdS-u2FqfxxbqzsKW8mLhykVKkdBOHzT6xmkcIzuIZFnkyIt3-sOdHVjeEBNTbjerUry1gCpDat8pXyEC4z3~fnzLM-rbZqHixXFmg__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/KBS-Joy-HD-live.jpg">
+                        <div class="chInfo">KBS Joy</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://kbsnlife.gscdn.kbs.co.kr/kbsnlife-02/kbsnlife-02_sd.m3u8?Expires=1714555240&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9rYnNubGlmZS5nc2Nkbi5rYnMuY28ua3Iva2JzbmxpZmUtMDIva2JzbmxpZmUtMDJfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTI0MH19fV19&Signature=QygRF7DZ8QQ9CI1M1TJ6551JV6jxv5CrDXuEjZy1uiUTv7k4IINXmVHMZtnMJgxS-1fM~NiWhItIygF1NyTjtmVfnWEtOhSildxNUGIJr3z4ULnSxIq8Qb95mTEROq2Z-NsOc2NlKaCl5xgdjXIjMQNeyd45Xm14tGMN5LqkbKLIt90EOUZMjNOjkPlyPmZGGlifqesao1ccKNkGBmPpXZoa4CIErfOM9HZvwPTFxIo0r4jcoDI3JAu-CMK~tmr7R0Ck6fD9S8nPLn1XTV~bue175FsKorvB3TDm8gGjp7bSPB6qGcn6~zsghOCBg3aMRhmh8ZpbSi2fyVz3OYDn7A__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/images.jpg">
+                        <div class="chInfo">KBS Life</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://kbsnw.gscdn.kbs.co.kr/kbsnw-01/kbsnw-01_sd.m3u8?Expires=1714555210&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9rYnNudy5nc2Nkbi5rYnMuY28ua3Iva2JzbnctMDEva2JzbnctMDFfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTIxMH19fV19&Signature=m0sgVK1iD2e-ny3hlKL3QJGuuEZMXDEhn~D2qXuiMqmLwWv3jpP7bcfogcaFe7HLN4MJctk7QXDGDZlhW6xdDt~eQxDm2R2PYASUDTETplBeK~0GS0YPGTUDVbIDGWLgEBMNnksF8shsjviFeVHyUPr5N8yVP2emasNhxWtoIeml8y~Yf02wxcUbv~8QAO31Oi2B5nx2ieIfQMyqIJhBt2ZslneEmSkmCMFOTnLd6jUBl3~msXPqQVg4eevYW-JSbk8Y2Q59Ih9zPoVcrslW3gvSAuicefraPL7JZX5rJrjw9kPLzt02HTAfggMjKVlCFFOCmytpu1a8LzdFaanGyA__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/kbs_story.jpg">
+                        <div class="chInfo">KBS Story</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://kbsnkids.gscdn.kbs.co.kr/kbsnkids-02/kbsnkids-02_sd.m3u8?Expires=1714555216&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9rYnNua2lkcy5nc2Nkbi5rYnMuY28ua3Iva2JzbmtpZHMtMDIva2JzbmtpZHMtMDJfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTIxNn19fV19&Signature=XsjM5mYiEWKdNweEXMvKPbZp49~7AgJbXEgbMBWDzXBQtPV0XqgEcP8ECQtRg89rcRLIddb7HsbTk7OXFclz5PPR0UgzfUSCdqaED-l5yoHornGCTC9KliY~egfq5Flc1ZieZtbgrYOVGe~XmhR74OawJR0~HCAfBgm9KsUyHat7H3BRcdZsAnfikd46aJVZ-IR8cTcFjDvtnzTp9JYphWvrwNI~4~BC5uJ5de3yApu~DFBWqpvAFvhHoMq2AyV~I59zeMpKdQ2CAWI8M0qjRZrCW89GGbsIqJH6NdC5PUcQCpe7C-8V0I93zZwDB0Nh9iJCyVhH9HyyLuJ948z4ZQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/images.png">
+                        <div class="chInfo">KBS Kids</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://world.gscdn.kbs.co.kr/world-01/world-01_sd.m3u8?Expires=1714555071&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly93b3JsZC5nc2Nkbi5rYnMuY28ua3Ivd29ybGQtMDEvd29ybGQtMDFfc2QubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNDU1NTA3MX19fV19&Signature=LopcDzFrFLp~qpCWK6H8LDuiTL7sKFtByy2yeKOdPrTfvkRjKTL~QA3ntdrsYgCtFseK5N8nD~Z-r-Q3sMMK8ocEqO5jm2Tdp9evxK4QSHfttyfYQhDWobMaJFHZ~BUE1yET7sj0ErFgU6kIS06WUlqweV3cQTFGIl7aCyq9DZfBPNFC9xwWE9y2HkIdn8v6E8O2siXouxvdR0d~sfKRdjrJ6rOEotuQzwdGazjWCX-XCbWXSyn5ULhjpXdgU5h8Mmj3JeTdcsrVuGneJs4f48lhHobfCWxzbyylT7X2qnD~mmC3ciR-DjNl~wYz-0UN-qeUVNhvyfXYnIv~2pgb2w__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA')" style="cursor: pointer;" ><img src="assets/images/icon/kbs_world.png">
+                        <div class="chInfo">KBS World</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://ns1.tjmbc.co.kr/live/myStream.sdp/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">대전 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://5ee1ec6f32118.streamlock.net/live/livetv/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">대구 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://media.kjmbc.co.kr/hls/live/stream/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">광주 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://5ee9633b25727.streamlock.net/jmbc_tv/_definst_/jmbc_tv.stream/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">전주 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('http://vod.mbceg.co.kr:1935/tvlive/livestream2/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">강원 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://vod.mpmbc.co.kr/a_live/25246741/ch001/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">목포 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://stream.chmbc.co.kr/TV/myStream/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">춘천 MBC</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://wowza.jejumbc.com/live/tv_jejumbc/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/260x180.crop.jpg">
+                        <div class="chInfo">제주 MBC</div>
+                        </div>
+
+
+                        <div class="tile" onclick="openVideoWindow('http://1.245.74.5:1935/live/tv/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">대전 SBS</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('http://203.251.91.122:1935/on-air-Backup/tv/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">대구 SBS</div>
+                        </div>
+                        <div class="tile" onclick="openVideoWindow('https://vod.ikbc.co.kr/KBCTV/tv/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">광주 SBS</div>
+                        </div>                  
+                        <div class="tile" onclick="openVideoWindow('http://61.85.197.53:1935/jtv_live/myStream/playlist.m3u8')" style="cursor: pointer;"><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">전주 SBS</div>
+                        </div>                        
+                        <div class="tile" onclick="openVideoWindow('http://61.82.49.4:1935/live/_definst_/tv.stream/chunklist_w432889607.m3u8')" style="cursor: pointer;"><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">강원 SBS</div>
+                        </div>                         
+                        <div class="tile" onclick="openVideoWindow('http://59.23.231.102:1935/live/UBCstream/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">울산 SBS</div>
+                        </div>                       
+                        <div class="tile" onclick="openVideoWindow('http://1.222.207.80:1935/live/cjbtv/playlist.m3u8')" style="cursor: pointer;" ><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">청주 SBS</div>
+                        </div>                      
+                        <div class="tile" onclick="openVideoWindow('https://stream1.knn.co.kr/hls/9ly4534y7dm2xfa123r2_tv/index.m3u8')" style="cursor: pointer;"><img src="assets/images/icon/sbs.jpg">
+                        <div class="chInfo">부산 SBS</div>
+                        </div>
+
+                        
+                        <div class="tile" onclick="openVideoWindow('https://d2zve2l62bwzcf.cloudfront.net/h264/spotv1/cmaf-hls/master.m3u8')" style="cursor: pointer;"><img src="assets/images/icon/spotv.png">          
+                        <div class="chInfo">SPOtv</div>
+                        </div>    
+                        <div class="tile" onclick="openVideoWindow('https://tvlive.sbs.co.kr/sbspluspc/sbsplus2.stream/chunklist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTQ1NzY1MDUsInBhdGgiOiIvc2JzcGx1czIuc3RyZWFtIiwiZHVyYXRpb24iOi0xLCJ1bm8iOiI0ZmIzZWVmMC04MDU2LTRjZTYtYmI0Zi1iNmQ3ZjYxZjU5NGUiLCJpYXQiOjE3MTQ1NjkzMDV9.yPu3gJOWzwDqasNVawCO8qQGR8YCpYKoRZhQWBvB9ss&solsessionid=dc2f275713cbcd78b012ebcb47079f4a')" style="cursor: pointer;"><img src="assets/images/icon/sbsplus.png">          
+                        <div class="chInfo">sbsplus</div>
+                        </div>    
                 </div>
             </div>
         </div>

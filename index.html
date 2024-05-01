@@ -218,16 +218,26 @@ https://templatemo.com/tm-571-hexashop
                                 var encodedUrl = encodeURIComponent(videoUrl);
                                 var windowFeatures = "width=1230, height=735, resizable=yes, scrollbars=yes";
                             
-                                if (/iphone|ipad|ipod|Android|android|IEMobile|Mobile/i.test(userAgent)) {
-                                    // 모바일 사용자는 간단한 HTML 페이지로 리다이렉션
-                                    window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
-                                } else if (userAgent.includes('chrome') && !userAgent.includes('edg')){
-                                    // 크롬 사용자는 확장 프로그램 URL로 리다이렉션
-                                    window.open("chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl, "VideoPlayerWindow", windowFeatures);
-                                } else {
-                                    // 그 외의 경우는 기본 비디오 페이지 사용
-                                    window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
-                                }
+                            if (!videoWindow || videoWindow.closed) {
+                                        // videoWindow가 존재하지 않거나 닫혀있다면
+                                        if (/iphone|ipad|ipod|Android|android|IEMobile|Mobile/i.test(userAgent)) {
+                                            videoWindow = window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
+                                        } else if (userAgent.includes('chrome') && !userAgent.includes('edg')){
+                                            videoWindow = window.open("chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl, "VideoPlayerWindow", windowFeatures);
+                                        } else {
+                                            videoWindow = window.open("video.html?video=" + encodedUrl, "VideoPlayerWindow", windowFeatures);
+                                        }
+                                    } else {
+                                        // videoWindow가 여전히 열려 있다면, 위치를 업데이트합니다.
+                                        if (/iphone|ipad|ipod|Android|android|IEMobile|Mobile/i.test(userAgent)) {
+                                            videoWindow.location.href = "video.html?video=" + encodedUrl;
+                                        } else if (userAgent.includes('chrome') && !userAgent.includes('edg')){
+                                            videoWindow.location.href = "chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + encodedUrl;
+                                        } else {
+                                            videoWindow.location.href = "video.html?video=" + encodedUrl;
+                                        }
+                                        videoWindow.focus(); // 기존 창을 전면으로 가져옵니다.
+                                    }
                             }
                             </script>
 
